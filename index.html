@@ -6,25 +6,57 @@
     <title>The weather collective</title>
   </head>
   <body>
-    <h1>Welcome to my weather app</h1>
+    <div class="display">
+      <header>
+        <form action="">
+          <input
+            type="search"
+            id="item search"
+            class="search-bar"
+            placeholder="Enter city..."
+            required
+          />
+          <input type="submit" value="search" class="button" />
+        </form>
+      </header>
+      <main>
+        <div class="current-weather">
+          <div>
+            <h1>New York</h1>
+            <div class="data">
+              <p>
+                <span id="current-time">Sunday 12:12</span>, moderate rain
+                <br />
+                Humidity: <strong>90%</strong>, Wind: <strong>8.6Km/h</strong>
+              </p>
+            </div>
+          </div>
+          <div class="current-temp">20°C</div>
+        </div>
+      </main>
+      <footer>
+        <p>
+          <small
+            >This project was coded by
+            <a href="https://github.com/DianaMJB" target="_blank"
+              >Diana Jimenez</a
+            >
+            find it
+            <a
+              href="https://github.com/iva-pa/weather-app/blob/main/source/script.js"
+              target="_blank"
+            >
+              on GitHub</a
+            >
+            and
+            <a
+              href="https://the-weather-collective.netlify.app/"
+              target="_blank"
+              >hosted on Netlify</a
+            ></small
+          >
+        </p>
+      </footer>
+    </div>
   </body>
-  <footer>
-    <p>
-      <small
-        >This project was coded by
-        <a href="https://github.com/DianaMJB" target="_blank">Diana Jimenez</a>
-        find it
-        <a
-          href="https://github.com/iva-pa/weather-app/blob/main/source/script.js"
-          target="_blank"
-        >
-          on GitHub</a
-        >
-        and
-        <a href="https://the-weather-collective.netlify.app/" target="_blank"
-          >hosted on Netlify</a
-        ></small
-      >
-    </p>
-  </footer>
 </html>
