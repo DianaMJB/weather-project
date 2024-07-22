@@ -7,7 +7,12 @@ header {
   border-bottom: 1px solid rgb(194, 222, 246);
 }
 div.display {
-  background-color: aliceblue;
+  background: rgb(238, 233, 174);
+  background: radial-gradient(
+    circle,
+    rgba(238, 233, 174, 0.6327433628318584) 0%,
+    rgba(148, 187, 233, 0.49557522123893805) 100%
+  );
   margin: 60px auto;
   border: solid 1px rgb(214, 229, 242);
   max-width: 600px;
@@ -40,24 +45,46 @@ main {
   padding: 20px;
   padding-bottom: 10px;
 }
+div h1 {
+  font-weight: 100;
+}
 .current-weather {
   display: flex;
   justify-content: space-between;
 }
-div h1 {
+.current-temp-display {
+  display: flex;
+  justify-content: space-between;
+  font-size: 40px;
   font-weight: 100;
 }
-div.data {
+.current-temp-icon {
+  font-size: 40px;
+  margin-top: 11px;
+}
+.current-temp {
+  margin-top: 11px;
+  margin-left: 10px;
+}
+.current-temp-unit {
+  margin-top: 16px;
+  font-size: 20px;
+  font-weight: 200;
+}
+. div.data {
+  font-weight: 300;
+  font-size: medium;
 }
 footer p {
-  color: rgb(194, 222, 246);
+  color: rgb(160, 186, 208);
   margin-top: 20px;
   padding: 20px;
   text-align: center;
-  border-top: 1px solid;
+  border-top: 1px solid rgb(194, 222, 246);
   font-size: medium;
 }
 footer p a {
   text-decoration: underline;
   font-weight: 700;
+  color: rgb(92, 117, 139);
 }
