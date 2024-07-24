@@ -58,19 +58,22 @@ div h1 {
 .current-temp-display {
   display: flex;
   justify-content: space-between;
-  font-size: 40px;
+  font-size: 50px;
   font-weight: 100;
 }
-.current-temp-icon {
-  font-size: 40px;
-  margin-top: 11px;
+.weather-icon {
+  width: 99px;
+  height: 99px;
+  margin-right: -20px;
+  margin-top: 15px;
 }
 .current-temp {
-  margin-top: 11px;
+  margin-top: 30px;
   margin-left: 10px;
+  line-height: 70px;
 }
 .current-temp-unit {
-  margin-top: 16px;
+  margin-top: 38px;
   font-size: 20px;
   font-weight: 200;
 }
