@@ -2,6 +2,15 @@ body {
   background-image: url(images/default.jpg);
   font-family: "Inter", sans-serif;
 }
+h1 {
+  color: rgb(92, 117, 139);
+  text-align: center;
+  margin-top: 60px;
+  font-family: "Roboto Serif", serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-size: 60px;
+}
 header {
   padding-bottom: 20px;
   border-bottom: 1px solid rgb(194, 222, 246);
@@ -17,8 +26,9 @@ div.display {
   border-radius: 10px;
   order: solid 1px rgb(255, 255, 255, 0.18);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-  margin: 60px auto;
+  margin: 50px auto 20px;
   padding: 30px 30px 5px 30px;
+  min-width: 300px;
   max-width: 600px;
 }
 form {
@@ -44,12 +54,12 @@ form input.button {
   color: rgb(29, 29, 80);
 }
 main {
-  padding: 20px;
   padding-bottom: 10px;
   color: white;
 }
 div h2 {
   font-weight: 100;
+  font-size: 35px;
 }
 .current-weather {
   display: flex;
@@ -79,14 +89,56 @@ div h2 {
 }
 div.data {
   font-weight: 300;
-  font-size: medium;
+  font-size: 16px;
+}
+#weather-description {
+  font-weight: 500;
+  color: rgb(160, 186, 208);
+}
+#humidity {
+  font-weight: 500;
+  color: rgb(160, 186, 208);
+}
+#wind {
+  font-weight: 500;
+  color: rgb(160, 186, 208);
+}
+.forecast {
+  border-top: 1px solid rgb(194, 222, 246);
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding-bottom: 10px;
+}
+.forecast-column {
+  width: 70px;
+  height: 70px;
+  padding: 13px 10px 10px 10px;
+  margin-top: 10px;
+  border-radius: 100%;
+  background-color: rgba(231, 229, 229, 0.051);
+}
+.forecast-day {
+  color: rgb(92, 117, 139);
+  font-size: 15px;
+  line-height: 20px;
+}
+.forecast-icon {
+  font-size: 20px;
+}
+.forecast-temperatures {
+  color: rgb(92, 117, 139);
+  font-size: 10px;
+  display: flex;
+  justify-content: center;
+}
+.forecast-temp {
+  padding-left: 4px;
 }
 footer p {
   color: rgb(160, 186, 208);
-  margin-top: 20px;
-  padding: 20px;
   text-align: center;
-  border-top: 1px solid rgb(194, 222, 246);
   font-size: medium;
 }
 footer p a {

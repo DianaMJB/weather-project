@@ -11,9 +11,17 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&family=Inter&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Bubbles&display=swap"
+      rel="stylesheet"
+    />
+
     <title>The weather collective</title>
   </head>
   <body>
+    <h1>THE WEATHER COLLECTIVE</h1>
     <div class="display">
       <header>
         <form id="search-engine">
@@ -30,7 +38,7 @@
       <main>
         <div class="current-weather">
           <div>
-            <h1 id="city"></h1>
+            <h2 id="city"></h2>
             <div class="data">
               <p>
                 <span id="current-time"></span>,
@@ -46,31 +54,79 @@
             <div class="current-temp-unit">°C</div>
           </div>
         </div>
+        <div class="forecast">
+          <div class="forecast-column">
+            <div class="forecast-day">Wed</div>
+            <div class="forecast-icon">☀️</div>
+            <div class="forecast-temperatures">
+              <div class="forecast-temp"><strong>10°</strong></div>
+              <div class="forecast-temp">3°</div>
+            </div>
+          </div>
+          <div class="forecast-column">
+            <div class="forecast-day">Thu</div>
+            <div class="forecast-icon">☀️</div>
+            <div class="forecast-temperatures">
+              <div class="forecast-temp"><strong>10°</strong></div>
+              <div class="forecast-temp">3°</div>
+            </div>
+          </div>
+          <div class="forecast-column">
+            <div class="forecast-day">Fri</div>
+            <div class="forecast-icon">☀️</div>
+            <div class="forecast-temperatures">
+              <div class="forecast-temp"><strong>10°</strong></div>
+              <div class="forecast-temp">3°</div>
+            </div>
+          </div>
+          <div class="forecast-column">
+            <div class="forecast-day">Sat</div>
+            <div class="forecast-icon">☀️</div>
+            <div class="forecast-temperatures">
+              <div class="forecast-temp"><strong>10°</strong></div>
+              <div class="forecast-temp">3°</div>
+            </div>
+          </div>
+          <div class="forecast-column">
+            <div class="forecast-day">Sun</div>
+            <div class="forecast-icon">☀️</div>
+            <div class="forecast-temperatures">
+              <div class="forecast-temp"><strong>10°</strong></div>
+              <div class="forecast-temp">3°</div>
+            </div>
+          </div>
+          <div class="forecast-column">
+            <div class="forecast-day">Mon</div>
+            <div class="forecast-icon">☀️</div>
+            <div class="forecast-temperatures">
+              <div class="forecast-temp"><strong>10°</strong></div>
+              <div class="forecast-temp">3°</div>
+            </div>
+          </div>
+        </div>
       </main>
-      <footer>
-        <p>
-          <small
-            >This project was coded by
-            <a href="https://github.com/DianaMJB" target="_blank"
-              >Diana Jimenez</a
-            >
-            find it
-            <a
-              href="https://github.com/iva-pa/weather-app/blob/main/source/script.js"
-              target="_blank"
-            >
-              on GitHub</a
-            >
-            and
-            <a
-              href="https://the-weather-collective.netlify.app/"
-              target="_blank"
-              >hosted on Netlify</a
-            ></small
-          >
-        </p>
-      </footer>
     </div>
+    <footer>
+      <p>
+        <small
+          >This project was coded by
+          <a href="https://github.com/DianaMJB" target="_blank"
+            >Diana Jimenez</a
+          >
+          find it
+          <a
+            href="https://github.com/iva-pa/weather-app/blob/main/source/script.js"
+            target="_blank"
+          >
+            on GitHub</a
+          >
+          and
+          <a href="https://the-weather-collective.netlify.app/" target="_blank"
+            >hosted on Netlify</a
+          ></small
+        >
+      </p>
+    </footer>
     <script src="src/index.js"></script>
   </body>
 </html>
