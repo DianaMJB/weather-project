@@ -13,7 +13,7 @@ h1 {
 }
 header {
   padding-bottom: 20px;
-  border-bottom: 1px solid rgb(194, 222, 246);
+  border-bottom: 1px solid rgba(194, 222, 246, 0.571);
 }
 div.display {
   background: linear-gradient(
@@ -104,7 +104,7 @@ div.data {
   color: rgb(160, 186, 208);
 }
 .forecast {
-  border-top: 1px solid rgb(194, 222, 246);
+  border-top: 1px solid rgba(194, 222, 246, 0.571);
   text-align: center;
   display: flex;
   justify-content: space-between;
