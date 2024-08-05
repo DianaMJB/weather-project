@@ -6,10 +6,10 @@ h1 {
   color: rgb(92, 117, 139);
   text-align: center;
   margin-top: 60px;
-  font-family: "Roboto Serif", serif;
+  font-family: "Anton", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 100;
-  font-size: 60px;
+  font-weight: 400;
+  font-size: 50px;
 }
 header {
   padding-bottom: 20px;
