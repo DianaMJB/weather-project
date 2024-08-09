@@ -10,7 +10,7 @@ function updateWeather(response) {
   let iconElement = document.querySelector("#icon");
 
   temperatureElement.innerHTML = Math.round(temperature);
-  cityElement.innerHTML = response.data.city;
+  cityElement.innerHTML = `${response.data.city}, ${response.data.country}`;
   descriptionElement.innerHTML = response.data.condition.description;
   humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
   windElement.innerHTML = `${response.data.wind.speed}Km/h`;
@@ -18,6 +18,7 @@ function updateWeather(response) {
   iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-icon"/>`;
 
   getForecast(response.data.city);
+  displayBG(response.data);
 }
 
 function formatDate(date) {
@@ -32,6 +33,7 @@ function formatDate(date) {
     "Friday",
     "Saturday",
   ];
+
   let day = days[date.getDay()];
   if (minutes < 10) {
     minutes = `0${minutes}`;
@@ -42,6 +44,7 @@ function formatDate(date) {
 
   return `${day} ${hour}:${minutes}`;
 }
+
 function searchCity(city) {
   let myApiKey = "0o3e0962641a02f3333tabb947225bb2";
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${myApiKey}&units=metric`;
@@ -51,6 +54,11 @@ function searchCity(city) {
 function handleSearch(event) {
   event.preventDefault();
   let searchInput = document.querySelector("#item-search");
+  let main = document.querySelector("#main");
+
+  setTimeout(() => {
+    main.setAttribute("style", `max-height:500px`);
+  }, 400);
 
   searchCity(searchInput.value);
 }
@@ -69,8 +77,6 @@ function getForecast(city) {
 }
 
 function displayForecast(response) {
-  console.log(response.data);
-
   let forecastHtml = "";
 
   response.data.daily.forEach(function (day, index) {
@@ -96,6 +102,89 @@ function displayForecast(response) {
   forecastELement.innerHTML = forecastHtml;
 }
 
+function displayBG(data) {
+  let BGVideo = document.querySelector("#BGVideo");
+
+  let condition = data.condition.icon;
+  console.log(data.condition.icon);
+  switch (condition) {
+    case "clear-sky-day":
+      BGVideo.src = "src/videos/clear-sky-day.mp4";
+      break;
+
+    case "clear-sky-night":
+      BGVideo.src = "src/videos/clear-sky-night.mp4";
+      break;
+
+    case "few-clouds-day":
+      BGVideo.src = "src/videos/few-clouds-day.mp4";
+      break;
+
+    case "few-clouds-night":
+      BGVideo.src = "src/videos/few-clouds-night.mp4";
+      break;
+
+    case "scattered-clouds-day":
+      BGVideo.src = "src/videos/scattered-clouds-day.mp4";
+      break;
+
+    case "scattered-clouds-night":
+      BGVideo.src = "src/videos/scattered-clouds-night.mp4";
+      break;
+
+    case "broken-clouds-day":
+      BGVideo.src = "src/videos/broken-clouds-day.mp4";
+      break;
+
+    case "broken-clouds-night":
+      BGVideo.src = "src/videos/broken-clouds-night.mp4";
+      break;
+
+    case "shower-rain-day":
+      BGVideo.src = "src/videos/shower-rain-day.mp4";
+      break;
+
+    case "shower-rain-night":
+      BGVideo.src = "src/videos/shower-rain-night.mp4";
+      break;
+
+    case "rain-day":
+      BGVideo.src = "src/videos/rain-day.mp4";
+      break;
+
+    case "rain-night":
+      BGVideo.src = "src/videos/rain-night.mp4";
+      break;
+
+    case "thunderstorm-day":
+      BGVideo.src = "src/videos/thunderstorm-day.mp4";
+      break;
+
+    case "thunderstorm-night":
+      BGVideo.src = "src/videos/thunderstorm-night.mp4";
+      break;
+
+    case "snow-day":
+      BGVideo.src = "src/videos/snow-day.mp4";
+      break;
+
+    case "snow-night":
+      BGVideo.src = "src/videos/snow-night.mp4";
+      break;
+
+    case "mist-day":
+      BGVideo.src = "src/videos/mist-day.mp4";
+      break;
+
+    case "mist-night":
+      BGVideo.src = "src/videos/mist-night.mp4";
+      break;
+
+    default:
+      BGVideo.src = "src/videos/default.mp4";
+      break;
+  }
+}
+
 let searchForm = document.querySelector("#search-engine");
 searchForm.addEventListener("submit", handleSearch);
-searchCity("New York");
