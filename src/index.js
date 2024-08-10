@@ -17,6 +17,8 @@ function updateWeather(response) {
   timeElement.innerHTML = formatDate(date);
   iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-icon"/>`;
 
+  fUnit.celsius = response.data.temperature.current;
+
   getForecast(response.data.city);
   displayBG(response.data);
 }
@@ -186,5 +188,40 @@ function displayBG(data) {
   }
 }
 
+function convertUnit(event) {
+  let currentTemp = document.querySelector("#current-temp");
+  let fahrenheit = document.querySelector(".f-temp-unit");
+  let celsius = document.querySelector(".c-temp-unit");
+  if (unit == "C") {
+    currentTemp.innerHTML = Math.round(celsiusToFahrenheit(fUnit.celsius));
+    celsius.classList.remove("strong");
+    fahrenheit.classList.add("strong");
+    unit = "F";
+  } else {
+    currentTemp.innerHTML = Math.round(
+      fahrenheitToCelsius(currentTemp.innerHTML)
+    );
+    fahrenheit.classList.remove("strong");
+    celsius.classList.add("strong");
+    unit = "C";
+  }
+}
+
+function celsiusToFahrenheit(celsius) {
+  const fahrenheit = (celsius * 9) / 5 + 32;
+  return fahrenheit;
+}
+function fahrenheitToCelsius(fahrenheit) {
+  const celsius = (fahrenheit - 32) / 1.8;
+  return celsius;
+}
+
 let searchForm = document.querySelector("#search-engine");
 searchForm.addEventListener("submit", handleSearch);
+
+let fUnit = document.querySelector(".f-temp-unit");
+fUnit.addEventListener("click", convertUnit);
+
+let cUnit = document.querySelector(".c-temp-unit");
+cUnit.addEventListener("click", convertUnit);
+let unit = "C";

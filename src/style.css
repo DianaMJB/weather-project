@@ -83,6 +83,7 @@ div h2 {
   justify-content: space-between;
   font-size: 50px;
   font-weight: 100;
+  align-items: flex-start;
 }
 .weather-icon {
   width: 99px;
@@ -95,11 +96,31 @@ div h2 {
   margin-left: 10px;
   line-height: 70px;
 }
-.current-temp-unit {
+
+.units {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  align-content: flex-start;
+  flex-wrap: nowrap;
+  margin-left: 7px;
+}
+.c-temp-unit {
   margin-top: 38px;
   font-size: 20px;
   font-weight: 200;
 }
+.f-temp-unit {
+  margin-top: 38px;
+  font-size: 20px;
+  font-weight: 200;
+}
+
+.strong {
+  font-weight: 700;
+}
+
 div.data {
   font-weight: 300;
   font-size: 18px;
