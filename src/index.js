@@ -57,10 +57,12 @@ function handleSearch(event) {
   event.preventDefault();
   let searchInput = document.querySelector("#item-search");
   let main = document.querySelector("#main");
+  let header = document.querySelector("header");
+  header.classList.add("bottom-line");
 
   setTimeout(() => {
-    main.setAttribute("style", `max-height:500px`);
-  }, 400);
+    main.setAttribute("style", `max-height:600px`);
+  }, 500);
 
   searchCity(searchInput.value);
 }
